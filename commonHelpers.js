@@ -8,5 +8,5 @@ import"./assets/modulepreload-polyfill-3cfb730f.js";/* empty css                
                         alt="${i}"
                     />
                 </a>
-            </li>`)}),n.innerHTML+=p.join("")}c();new t(".gallery a",{captionsData:"alt",captionDelay:300,captionsPosition:"bottom"});
+            </li>`)}),n.innerHTML+=p.join("")}c();new t(".gallery a",{captionsData:"alt",captionDelay:250,captionsPosition:"bottom"});
 //# sourceMappingURL=commonHelpers.js.map
