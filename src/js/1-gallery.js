@@ -93,6 +93,6 @@ addElementsToGallery();
 
 new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
-  captionDelay: 300,
+  captionDelay: 250,
   captionsPosition: 'bottom',
 });

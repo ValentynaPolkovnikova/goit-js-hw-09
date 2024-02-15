@@ -1,6 +1,6 @@
 const storageKey = 'feedback-form-state';
-
 const form = document.querySelector('.feedback-form');
+let formData = {}; 
 
 function readFormData(form) {
   const message = form.message.value.trim();
@@ -13,9 +13,8 @@ function readFormData(form) {
 }
 
 form.addEventListener('input', event => {
-  const data = readFormData(event.currentTarget);
-  const jsonData = JSON.stringify(data);
-
+  formData = readFormData(event.currentTarget);
+  const jsonData = JSON.stringify(formData);
   localStorage.setItem(storageKey, jsonData);
 });
 
@@ -30,8 +29,8 @@ if (storageData) {
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  if (data.message && data.email) {
-    console.log(data);
+  if (formData.message && formData.email) { 
+    console.log(formData);
     form.reset();
     localStorage.removeItem(storageKey);
   } else {
