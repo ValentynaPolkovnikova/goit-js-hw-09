@@ -1,6 +1,6 @@
 const storageKey = 'feedback-form-state';
 const form = document.querySelector('.feedback-form');
-const formData = JSON.parse(localStorage.getItem(storageKey)) || { message: '', email: '' }; 
+let formData = readFormData(form);
 
 function readFormData(form) {
   const message = form.message.value.trim();
@@ -12,7 +12,7 @@ function readFormData(form) {
   };
 }
 
-if (formData) {
+if (formData.message && formData.email) {
   form.message.value = formData.message;
   form.email.value = formData.email;
 }
